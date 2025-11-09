@@ -1,0 +1,294 @@
+/* style.css */
+
+/* === Temel Ayarlar === */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f7f6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* === Header ve Navigasyon === */
+header {
+    background: #007bff; /* Mavi tonu */
+    color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.logo a {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffc107; /* Sarı logo vurgusu */
+    text-decoration: none;
+}
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.nav-links a:hover {
+    color: #ffc107;
+}
+
+/* === Genel İçerik ve Form === */
+section {
+    max-width: 1000px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+h1, h2 {
+    color: #007bff;
+    border-bottom: 2px solid #ffc107;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+button {
+    width: 100%;
+    background: #28a745; /* Yeşil buton */
+    color: #fff;
+    padding: 14px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+button:hover {
+    background: #218838;
+}
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    background: #e9f7ef;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+    border: 1px solid #28a745;
+}
+
+/* === Kart Yapısı === */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+.card {
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.card h3 {
+    color: #007bff;
+}
+.card i {
+    margin-bottom: 10px;
+}
+
+/* === SEO Alanı === */
+.seo-text {
+    font-size: 14px;
+    color: #6c757d;
+    text-align: center;
+    padding-top: 20px;
+}
+.city-seo-area {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    background: #e9f7ef;
+    border-radius: 12px;
+    border: 1px solid #28a745;
+}
+.city-seo-area h3 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.city-seo-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.city-seo-list a {
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    transition: background 0.3s;
+}
+.city-seo-list a:hover {
+    background: #ffc107;
+    color: #000;
+}
+
+/* === Footer === */
+footer {
+    background: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* === Sabit İletişim Butonları === */
+.contact-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+.contact-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+.contact-btn:hover {
+    transform: scale(1.1);
+}
+.whatsapp-btn {
+    background-color: #25d366;
+}
+.call-btn {
+    background-color: #dc3545; /* Kırmızı tonu */
+}
+
+
+/* ==================================== */
+/* === MOBİL UYUMLULUK (RESPONSIVE) === */
+/* ==================================== */
+
+/* Tablet ve Büyük Telefonlar (Max genişlik 768px) */
+@media (max-width: 768px) {
+    /* Genel Ayarlar */
+    section {
+        margin: 20px 10px;
+        padding: 20px;
+        border-radius: 8px; /* Daha küçük radius */
+    }
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+
+    /* Navigasyon Düzeni */
+    .navbar {
+        flex-direction: column; /* Logoyu ve linkleri alt alta al */
+        padding: 10px 20px;
+    }
+    .nav-links {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row; /* Linkleri yan yana tutmaya çalış */
+        flex-wrap: wrap; /* Sığmazsa alta geçsin */
+        justify-content: center;
+        gap: 10px;
+    }
+    .nav-links a {
+        margin-left: 0;
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+    
+    /* Kart Düzeni */
+    .card-grid {
+        grid-template-columns: 1fr; /* Tek sütuna düşür */
+        gap: 15px;
+    }
+
+    /* Form Elemanları */
+    input[type="text"], button {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    /* SEO Alanı */
+    .city-seo-area {
+        padding: 20px;
+    }
+    .city-seo-list a {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}
+
+/* Küçük Telefonlar (Max genişlik 480px) */
+@media (max-width: 480px) {
+    /* Başlıklar ve Logo Küçültme */
+    .logo a {
+        font-size: 24px;
+    }
+    h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    /* Navigasyonu gizle veya menüye çevirilebilir, ama şimdilik küçültelim */
+    .nav-links {
+         /* Daha fazla satıra izin ver */
+         display: block;
+         text-align: center;
+    }
+    .nav-links a {
+        display: inline-block;
+        padding: 5px;
+    }
+    
+    /* Sabit Butonlar */
+    .contact-buttons {
+        bottom: 15px;
+        right: 15px;
+        gap: 8px;
+    }
+    .contact-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+    }
+}
